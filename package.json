@@ -1,26 +1,24 @@
 {
-  "name": "recaptcha-harvester",
+  "name": "recaptcha-v3",
   "version": "2.1.0",
-  "description": "Self-hosted reCAPTCHA v3 solver and token harvester (Enterprise and standard), built on Playwright",
+  "description": "Self-hosted reCAPTCHA v3 solver (Enterprise and standard), built on Playwright",
   "main": "src/server.js",
   "license": "MIT",
   "author": "Clement Aubert",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clementclecle/recaptcha-harvester.git"
+    "url": "git+https://github.com/hikaru-saito-dev/recaptcha-v3.git"
   },
   "bugs": {
-    "url": "https://github.com/clementclecle/recaptcha-harvester/issues"
+    "url": "https://github.com/hikaru-saito-dev/recaptcha-v3/issues"
   },
-  "homepage": "https://github.com/clementclecle/recaptcha-harvester#readme",
+  "homepage": "https://github.com/hikaru-saito-dev/recaptcha-v3#readme",
   "keywords": [
     "recaptcha",
     "recaptcha-v3",
     "recaptcha-enterprise",
     "captcha",
     "captcha-solver",
-    "captcha-harvester",
-    "token-harvester",
     "playwright",
     "stealth",
     "anti-bot",
@@ -35,7 +33,7 @@
     "test": "node test/run.js",
     "test:solve": "node test/test-solve.js",
     "test:score": "node test/test-score.js",
-    "build": "pkg src/server.js --targets node20-macos-x64,node20-macos-arm64,node20-linux-x64,node20-win-x64 --output dist/recaptcha-harvester --no-bytecode --public --compress GZip"
+    "build": "pkg src/server.js --targets node20-macos-x64,node20-macos-arm64,node20-linux-x64,node20-win-x64 --output dist/recaptcha-v3 --no-bytecode --public --compress GZip"
   },
   "files": [
     "src/",

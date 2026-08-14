@@ -1,4 +1,4 @@
-# recaptcha-harvester
+# recaptcha-v3
 
 Self-hosted reCAPTCHA v3 solver, both Enterprise and standard. It runs a pool of warm,
 stealth-patched Chromium instances behind a small HTTP API and hands back tokens.
@@ -30,8 +30,8 @@ need a challenge to be solved rather than just a score.
 ## Quick start
 
 ```bash
-git clone https://github.com/clementclecle/recaptcha-harvester.git
-cd recaptcha-harvester
+git clone https://github.com/hikaru-saito-dev/recaptcha-v3.git
+cd recaptcha-v3
 npm install
 npm run setup                 # downloads Chromium for Playwright
 
@@ -210,14 +210,14 @@ Playwright rather than Puppeteer, which only accepts a proxy at browser-launch t
 ## Docker
 
 ```bash
-docker build -t recaptcha-harvester .
+docker build -t recaptcha-v3 .
 docker run --rm -p 3131:3131 \
   -e HOST=0.0.0.0 \
   -e API_KEY=your-secret \
   -v "$PWD/config.yaml:/app/config.yaml:ro" \
   -v "$PWD/proxies.txt:/app/proxies.txt:ro" \
   --shm-size=1g \
-  recaptcha-harvester
+  recaptcha-v3
 ```
 
 `--shm-size=1g` matters: Chromium's default 64 MB of shared memory in a container causes
